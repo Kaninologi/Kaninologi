@@ -123,6 +123,15 @@
       color: #333333;
     }
 
+    .about-image {
+      display: block;
+      width: 100%;
+      max-width: 520px;
+      height: auto;
+      margin: 35px auto 40px;
+      border-radius: 4px;
+    }
+
     .veterinary-note {
       margin: 40px 0;
       padding: 25px 28px;
@@ -175,6 +184,11 @@
       .about p {
         font-size: 16px;
       }
+
+      .about-image {
+        max-width: 100%;
+        margin: 30px auto 35px;
+      }
     }
   </style>
 </head>
@@ -200,4 +214,85 @@
       <a href="../sundhed/">Sundhed</a>
       <a href="../ernaering/">Ernæring</a>
       <a href="../adfaerd/">Adfærd</a>
-      <a
+      <a href="../planter/">Planter</a>
+      <a href="../kaninhold/">Kaninhold</a>
+      <a href="../om/" class="active">Om Kaninologi</a>
+    </nav>
+
+  </div>
+
+</header>
+
+<main>
+
+  <section class="page-header">
+    <h1>Om Kaninologi</h1>
+
+    <p>
+      Hvem står bag Kaninologi, og hvorfor findes siden?
+    </p>
+  </section>
+
+  <article class="about">
+
+    <h2>Hvem står bag Kaninologi?</h2>
+
+    <p>
+      Jeg hedder Isabella Gundager, og min historie med kaniner begyndte for mere end 25 år siden, da jeg fik min første kanin, Nanna. Hun boede, som mange kaniner gjorde dengang, i et bur i haven. Senere kom flere kaniner til, og kaniner har på den ene eller anden måde været en del af mit liv lige siden.
+    </p>
+
+    <img
+      src="images/FB_IMG_1789366194134.jpg"
+      alt="Isabella Gundager"
+      class="about-image"
+    >
+
+    <p>
+      Da jeg blev voksen og selv fik det fulde ansvar for mine kaniner, begyndte jeg for alvor at stille spørgsmålstegn ved meget af det, jeg havde lært om at holde kanin. Hvor meget plads har de egentlig brug for? Hvad bør de spise? Hvordan fungerer deres adfærd, og hvad skal der egentlig til for at give dem et godt kaninliv?
+    </p>
+
+    <p>
+      De spørgsmål blev starten på mange års research og nørderi. Jo mere jeg lærte, jo flere spørgsmål fik jeg, og min måde at holde og forstå kaniner på ændrede sig undervejs. Den nysgerrighed er en stor del af grunden til, at Kaninologi findes i dag.
+    </p>
+
+    <h2>Min faglige baggrund</h2>
+
+    <p>
+      Til daglig har jeg en sundhedsfaglig baggrund som uddannet sygeplejerske. Det er selvfølgelig ikke det samme som at have en veterinærfaglig uddannelse, men det har givet mig en faglig ballast inden for blandt andet anatomi, fysiologi, kildekritik og formidling. Den tager jeg med mig, når jeg dykker ned i litteraturen og forsøger at gøre kompliceret viden om kaniner forståelig og anvendelig i hverdagen.
+    </p>
+
+    <div class="veterinary-note">
+      <p>
+        Kaninologi erstatter selvfølgelig ikke veterinærfaglig rådgivning. Er en kanin syg, bør den tilses af en kaninerfaren dyrlæge.
+      </p>
+    </div>
+
+    <h2>Hvorfor Kaninologi?</h2>
+
+    <p>
+      Kaninologi bliver et sted for guides, planter, kaninnørderi og den viden, jeg ville ønske, mine forældre havde haft adgang til, da jeg fik min første kanin for mere end 25 år siden.
+    </p>
+
+    <p>
+      Meget har ændret sig siden dengang, og heldigvis ved vi langt mere om kaniners behov i dag. Den viden vil jeg gerne være med til at gøre lettere at finde og forstå.
+    </p>
+
+  </article>
+
+</main>
+
+<footer>
+  © 2026 Kaninologi · Viden om kaniner
+</footer>
+
+<script>
+  const mobileMenu = document.getElementById("mobileMenu");
+  const mainMenu = document.getElementById("mainMenu");
+
+  mobileMenu.addEventListener("click", function() {
+    mainMenu.classList.toggle("mobile-open");
+  });
+</script>
+
+</body>
+</html>
