@@ -1,1 +1,480 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Kaninens kostpyramide | Kaninologi</title>
+
+  <meta name="description"
+        content="Læs om kaninens kostpyramide og få et overblik over hø, græs, grønt, foderpiller, grene og godbidder i kaninens kost.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: #222222;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .top {
+      background: #ffffff;
+      text-align: center;
+      padding: 16px 20px 14px;
+    }
+
+    .logo {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 3px;
+    }
+
+    .logo a {
+      color: #222222;
+      text-decoration: none;
+    }
+
+    .menu-bar {
+      background: #536557;
+    }
+
+    .menu {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu a {
+      min-height: 54px;
+      padding: 0 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      transition: background .2s ease;
+    }
+
+    .menu a:hover,
+    .menu a.active {
+      background: rgba(255,255,255,.12);
+    }
+
+    .mobile-menu-button {
+      display: none;
+      width: 100%;
+      height: 52px;
+      border: none;
+      background: #536557;
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .article {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 70px 24px 100px;
+    }
+
+    .article-header {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .article-header h1 {
+      margin: 0 0 18px;
+      font-size: 42px;
+      line-height: 1.15;
+      color: #222222;
+    }
+
+    .article-header p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #555555;
+    }
+
+    .article-image {
+      display: block;
+      width: 100%;
+      max-width: 720px;
+      height: auto;
+      margin: 0 auto 50px;
+      border-radius: 4px;
+    }
+
+    .article-section {
+      margin-bottom: 48px;
+    }
+
+    .article-section h2 {
+      margin: 0 0 18px;
+      font-size: 27px;
+      line-height: 1.3;
+      color: #2f3a31;
+    }
+
+    .article-section p {
+      margin: 0 0 18px;
+      font-size: 17px;
+      line-height: 1.8;
+      color: #333333;
+    }
+
+    .notice {
+      margin: 30px 0 50px;
+      padding: 24px 28px;
+      background: #e5ebe5;
+      border-left: 5px solid #536557;
+    }
+
+    .notice p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #344038;
+    }
+
+    .sources {
+      margin-top: 65px;
+      padding-top: 35px;
+      border-top: 1px solid #dddddd;
+    }
+
+    .sources h2 {
+      margin: 0 0 22px;
+      font-size: 24px;
+      color: #2f3a31;
+    }
+
+    .sources p {
+      margin: 0 0 16px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #555555;
+    }
+
+    footer {
+      border-top: 1px solid #eeeeee;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #777777;
+      background: #ffffff;
+    }
+
+    @media (max-width: 850px) {
+      .top {
+        padding: 14px 18px 12px;
+      }
+
+      .logo {
+        font-size: 27px;
+      }
+
+      .mobile-menu-button {
+        display: block;
+      }
+
+      .menu {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .menu.mobile-open {
+        display: flex;
+      }
+
+      .menu a {
+        width: 100%;
+        min-height: 48px;
+        justify-content: flex-start;
+        padding: 0 22px;
+        border-top: 1px solid rgba(255,255,255,.10);
+      }
+
+      .article {
+        padding: 50px 20px 70px;
+      }
+
+      .article-header h1 {
+        font-size: 34px;
+      }
+
+      .article-header p {
+        font-size: 16px;
+      }
+
+      .article-section h2 {
+        font-size: 24px;
+      }
+
+      .article-section p {
+        font-size: 16px;
+      }
+
+      .notice {
+        padding: 22px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="top">
+    <p class="logo">
+      <a href="../../">KANINOLOGI</a>
+    </p>
+  </div>
+
+  <div class="menu-bar">
+
+    <button class="mobile-menu-button" id="mobileMenu" aria-label="Åbn menu">
+      Menu ☰
+    </button>
+
+    <nav class="menu" id="mainMenu">
+      <a href="../../">Forside</a>
+      <a href="../../sundhed/">Sundhed</a>
+      <a href="../" class="active">Ernæring</a>
+      <a href="../../adfaerd/">Adfærd</a>
+      <a href="../../planter/">Planter</a>
+      <a href="../../kaninhold/">Kaninhold</a>
+      <a href="../../om/">Om Kaninologi</a>
+    </nav>
+
+  </div>
+
+</header>
+
+<main class="article">
+
+  <header class="article-header">
+    <h1>Kaninens kostpyramide</h1>
+
+    <p>
+      Hvad skal der egentlig i madskålen, høhækken og på grønttallerkenen?
+    </p>
+  </header>
+
+  <img
+    src="../images/FB_IMG_1789369954275.jpg"
+    alt="Kaninens kostpyramide"
+    class="article-image"
+  >
+
+  <section class="article-section">
+
+    <p>
+      Her får du et overblik over de forskellige dele af kaninens kost,
+      hvorfor de er vigtige, og hvor meget din kanin cirka har brug for.
+    </p>
+
+    <div class="notice">
+      <p>
+        Procenterne i pyramiden er vejledende. Den enkelte kanins behov kan
+        blandt andet variere med alder, størrelse, aktivitetsniveau, huld og helbred.
+      </p>
+    </div>
+
+  </section>
+
+  <section class="article-section">
+
+    <h2>Hø og græs, ca. 80 %</h2>
+
+    <p>
+      Hø og græs bør udgøre langt størstedelen af kosten og være frit
+      tilgængeligt døgnet rundt.
+    </p>
+
+    <p>
+      Det høje fiberindhold er vigtigt for fordøjelsen, og de mange timers
+      tyggearbejde hjælper med at slide kaninens tænder naturligt. Kaniners
+      tænder vokser nemlig hele livet.
+    </p>
+
+    <p>
+      Hø og græs handler heller ikke kun om ernæring. Kaniner bruger naturligt
+      en stor del af deres tid på at spise og søge efter føde. Fri adgang til
+      hø giver dem derfor mulighed for at bruge mange timer på netop det.
+    </p>
+
+    <p>
+      Vælg gerne et groft, støvfrit og velduftende hø med god struktur og
+      forskellige græsarter. Frisk græs er også en rigtig god del af kosten,
+      men hvis kaninen ikke er vant til det, bør det introduceres gradvist.
+    </p>
+
+  </section>
+
+  <section class="article-section">
+
+    <h2>Grønt, ca. 15 %</h2>
+
+    <p>
+      Grønt kan bestå af bladgrønt, friske krydderurter og kaninsikre vilde planter.
+    </p>
+
+    <p>
+      Det kan for eksempel være forskellige typer kål, salat og krydderurter
+      eller vilde planter som mælkebøtte, vejbred, skvalderkål og mange andre
+      urter fra naturen.
+    </p>
+
+    <p>
+      Kål kan sagtens indgå i en varieret kaninkost. Som med andet nyt grønt
+      bør kaninen vænnes gradvist til det, så fordøjelsen får tid til at
+      tilpasse sig. Start med en lille mængde og øg langsomt.
+    </p>
+
+    <p>
+      Variation er en god idé frem for at servere det samme hver dag.
+      Plukker du selv i naturen, skal du være sikker på artsbestemmelsen og
+      vælge steder uden sprøjtemidler og anden forurening.
+    </p>
+
+  </section>
+
+  <section class="article-section">
+
+    <h2>Foderpiller, ca. 4 %</h2>
+
+    <p>
+      Foderpiller er et supplement til den øvrige kost og skal derfor kun
+      fylde en lille del.
+    </p>
+
+    <p>
+      Til en sund, voksen kanin kan man som udgangspunkt give omkring
+      5–15 g foderpiller pr. kg kropsvægt om dagen. En kanin på 2 kg vil
+      altså typisk få omkring 10–30 g dagligt.
+    </p>
+
+    <p>
+      Mængden er vejledende og bør altid tilpasses den enkelte kanin. Alder,
+      vægt, huld, aktivitetsniveau, helbred, leveforhold og resten af kosten
+      spiller alle ind. Nogle voksne kaniner trives derfor med meget lidt
+      foderpiller, mens andre har brug for mere.
+    </p>
+
+    <p>
+      Kaniner i vækst har et større behov for energi og næringsstoffer og kan
+      derfor have brug for mere foder. Her bør mængden tilpasses kaninens
+      alder, vækst og huld samt det konkrete juniorfoder.
+    </p>
+
+    <p>
+      Vælg et ensartet og fiberrigt pelleteret eller ekstruderet fuldfoder.
+    </p>
+
+  </section>
+
+  <section class="article-section">
+
+    <h2>Grene, gerne dagligt</h2>
+
+    <p>
+      Friske, kaninsikre grene er både noget at spise og noget at beskæftige
+      sig med. Kaninen kan gnave i barken, spise blade og friske skud og bruge
+      tid på at undersøge og arbejde med grenene.
+    </p>
+
+    <p>
+      Æble, pære, hassel og elm er nogle af de arter, du kan tilbyde.
+    </p>
+
+    <p>
+      Når kaninen gnaver i grene og bark, bidrager det også til at slide
+      tænderne. Grene kan dog ikke erstatte hø og græs, som kaninen bruger
+      mange timer på at tygge, og som derfor spiller en vigtig rolle for det
+      naturlige tandslid.
+    </p>
+
+  </section>
+
+  <section class="article-section">
+
+    <h2>Og den sidste lille del?</h2>
+
+    <p>
+      Frugt og andre sukkerholdige fødevarer er ikke nødvendige i kaninens
+      kost. De kan sagtens undværes, men kan også gives i små mængder som en
+      godbid en gang imellem.
+    </p>
+
+    <p>
+      Frisk vand skal altid være frit tilgængeligt. Det står ikke i pyramiden
+      som en procentdel, men er selvfølgelig helt grundlæggende for kaninens
+      sundhed.
+    </p>
+
+  </section>
+
+  <section class="sources">
+
+    <h2>Hvis du vil nørde mere</h2>
+
+    <p>
+      Rabbit Welfare Association &amp; Fund (RWAF). <em>How to feed rabbits.</em>
+    </p>
+
+    <p>
+      Harcourt-Brown, F. (2017). <em>Reflections on rabbit diets.</em>
+      Journal of Small Animal Practice, 58(3), 123–124.
+      DOI: 10.1111/jsap.12660
+    </p>
+
+    <p>
+      Harcourt-Brown, F. <em>Rabbit Basic Science.</em>
+      I: <em>Textbook of Rabbit Medicine.</em>
+    </p>
+
+    <p>
+      Meredith, A.L. &amp; Prebble, J.L. (2017).
+      <em>Impact of diet on faecal output and caecotroph consumption in rabbits.</em>
+      Journal of Small Animal Practice, 58(3), 139–145.
+      DOI: 10.1111/jsap.12620
+    </p>
+
+  </section>
+
+</main>
+
+<footer>
+  © 2026 Kaninologi · Viden om kaniner
+</footer>
+
+<script>
+  const mobileMenu = document.getElementById("mobileMenu");
+  const mainMenu = document.getElementById("mainMenu");
+
+  mobileMenu.addEventListener("click", function() {
+    mainMenu.classList.toggle("mobile-open");
+  });
+</script>
+
+</body>
+</html>
