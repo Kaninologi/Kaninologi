@@ -28,23 +28,19 @@
     .top {
       background: #ffffff;
       text-align: center;
-      padding: 24px 20px 20px;
+      padding: 16px 20px 14px;
     }
 
-    .top-image {
-      display: block;
-      width: 100%;
-      max-width: 760px;
-      height: auto;
-      margin: 0 auto;
+    .logo {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 3px;
     }
 
-    .tagline {
-      max-width: 720px;
-      margin: 18px auto 0;
-      font-size: 15px;
-      line-height: 1.5;
-      color: #666666;
+    .logo a {
+      color: #222222;
+      text-decoration: none;
     }
 
     .menu-bar {
@@ -90,220 +86,40 @@
       cursor: pointer;
     }
 
+    .hero {
+      text-align: center;
+      padding: 38px 24px 65px;
+      background: #ffffff;
+    }
+
+    .hero-image-container {
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 4px;
+    }
+
+    .tagline {
+      max-width: 720px;
+      margin: 24px auto 0;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #555555;
+    }
+
     .categories {
       max-width: 1050px;
       margin: 0 auto;
-      padding: 70px 25px 100px;
+      padding: 0 25px 100px;
     }
 
     .categories-title {
       text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .categories-title h1 {
-      margin: 0 0 10px;
-      font-size: 32px;
-      line-height: 1.2;
-    }
-
-    .categories-title p {
-      margin: 0;
-      color: #666666;
-      font-size: 16px;
-    }
-
-    .category-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .category-card {
-      min-height: 150px;
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      background: #e5ebe5;
-      border: 1px solid #cdd7ce;
-      text-decoration: none;
-      color: #263029;
-      transition: transform .2s ease, background .2s ease;
-    }
-
-    .category-card:hover {
-      transform: translateY(-3px);
-      background: #dbe4dc;
-    }
-
-    .category-card h2 {
-      margin: 0 0 6px;
-      font-size: 22px;
-    }
-
-    .category-card p {
-      margin: 0;
-      color: #536057;
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    footer {
-      border-top: 1px solid #eeeeee;
-      padding: 30px 20px;
-      text-align: center;
-      font-size: 13px;
-      color: #777777;
-      background: #ffffff;
-    }
-
-    @media (max-width: 850px) {
-
-      .top {
-        padding: 18px 16px 16px;
-      }
-
-      .top-image {
-        max-width: 100%;
-      }
-
-      .tagline {
-        margin-top: 14px;
-        padding: 0 5px;
-        font-size: 13px;
-      }
-
-      .mobile-menu-button {
-        display: block;
-      }
-
-      .menu {
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .menu.mobile-open {
-        display: flex;
-      }
-
-      .menu a {
-        width: 100%;
-        min-height: 48px;
-        justify-content: flex-start;
-        padding: 0 22px;
-        border-top: 1px solid rgba(255,255,255,.10);
-      }
-
-      .categories {
-        padding: 50px 20px 70px;
-      }
-
-      .category-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-
-  <div class="top">
-
-    <img
-      src="images/forside/FB_IMG_1789365767690.jpg"
-      alt="Kaninologi"
-      class="top-image"
-    >
-
-    <p class="tagline">
-      Faglig og evidensbaseret viden om kaniners adfærd, sundhed, ernæring og velfærd.
-    </p>
-
-  </div>
-
-  <div class="menu-bar">
-
-    <button class="mobile-menu-button" id="mobileMenu" aria-label="Åbn menu">
-      Menu ☰
-    </button>
-
-    <nav class="menu" id="mainMenu">
-      <a href="./" class="active">Forside</a>
-      <a href="sundhed/">Sundhed</a>
-      <a href="ernaering/">Ernæring</a>
-      <a href="adfaerd/">Adfærd</a>
-      <a href="planter/">Planter</a>
-      <a href="kaninhold/">Kaninhold</a>
-      <a href="om/">Om Kaninologi</a>
-    </nav>
-
-  </div>
-
-</header>
-
-<main>
-
-  <section class="categories">
-
-    <div class="categories-title">
-      <h1>Viden om kaniner</h1>
-      <p>Find det emne, du vil vide mere om.</p>
-    </div>
-
-    <div class="category-grid">
-
-      <a href="sundhed/" class="category-card">
-        <h2>Sundhed</h2>
-        <p>Sygdom, smerter, forebyggelse og kaninens sundhed.</p>
-      </a>
-
-      <a href="ernaering/" class="category-card">
-        <h2>Ernæring</h2>
-        <p>Kost, hø og græs, foder, snacks og godbidder.</p>
-      </a>
-
-      <a href="adfaerd/" class="category-card">
-        <h2>Adfærd</h2>
-        <p>Forstå kaninens adfærd, signaler og naturlige behov.</p>
-      </a>
-
-      <a href="planter/" class="category-card">
-        <h2>Planter</h2>
-        <p>Planteportrætter og viden om planter til kaniner.</p>
-      </a>
-
-      <a href="kaninhold/" class="category-card">
-        <h2>Kaninhold</h2>
-        <p>Bolig, indretning og gode rammer for hverdagen med kaniner.</p>
-      </a>
-
-      <a href="om/" class="category-card">
-        <h2>Om Kaninologi</h2>
-        <p>Hvem står bag Kaninologi, og hvorfor findes siden?</p>
-      </a>
-
-    </div>
-
-  </section>
-
-</main>
-
-<footer>
-  © 2026 Kaninologi · Viden om kaniner
-</footer>
-
-<script>
-  const mobileMenu = document.getElementById("mobileMenu");
-  const mainMenu = document.getElementById("mainMenu");
-
-  mobileMenu.addEventListener("click", function() {
-    mainMenu.classList.toggle("mobile-open");
-  });
-</script>
-
-</body>
-</html>
+      margin-bottom
