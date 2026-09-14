@@ -28,19 +28,23 @@
     .top {
       background: #ffffff;
       text-align: center;
-      padding: 16px 20px 14px;
+      padding: 24px 20px 20px;
     }
 
-    .logo {
-      margin: 0;
-      font-size: 32px;
-      font-weight: 700;
-      letter-spacing: 3px;
+    .top-image {
+      display: block;
+      width: 100%;
+      max-width: 760px;
+      height: auto;
+      margin: 0 auto;
     }
 
-    .logo a {
-      color: #222222;
-      text-decoration: none;
+    .tagline {
+      max-width: 720px;
+      margin: 18px auto 0;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #666666;
     }
 
     .menu-bar {
@@ -86,46 +90,10 @@
       cursor: pointer;
     }
 
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 50px 24px 80px;
-      text-align: center;
-      background: #ffffff;
-    }
-
-    .hero-content {
-      max-width: 900px;
-      width: 100%;
-    }
-
-    .tagline {
-      max-width: 720px;
-      margin: 0 auto;
-      font-size: 20px;
-      line-height: 1.6;
-      color: #555555;
-    }
-
-    .hero-image-container {
-      width: 100%;
-      max-width: 760px;
-      margin: 40px auto 0;
-    }
-
-    .hero-image {
-      display: block;
-      width: 100%;
-      height: auto;
-      margin: 0 auto;
-      border-radius: 4px;
-    }
-
     .categories {
       max-width: 1050px;
       margin: 0 auto;
-      padding: 0 25px 100px;
+      padding: 70px 25px 100px;
     }
 
     .categories-title {
@@ -133,7 +101,7 @@
       margin-bottom: 40px;
     }
 
-    .categories-title h2 {
+    .categories-title h1 {
       margin: 0 0 10px;
       font-size: 32px;
       line-height: 1.2;
@@ -157,26 +125,26 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      background: #f4f6f3;
-      border: 1px solid #e5e9e3;
+      background: #e5ebe5;
+      border: 1px solid #cdd7ce;
       text-decoration: none;
-      color: #222222;
+      color: #263029;
       transition: transform .2s ease, background .2s ease;
     }
 
     .category-card:hover {
       transform: translateY(-3px);
-      background: #eef2ec;
+      background: #dbe4dc;
     }
 
-    .category-card h3 {
+    .category-card h2 {
       margin: 0 0 6px;
       font-size: 22px;
     }
 
     .category-card p {
       margin: 0;
-      color: #666666;
+      color: #536057;
       font-size: 14px;
       line-height: 1.5;
     }
@@ -193,11 +161,17 @@
     @media (max-width: 850px) {
 
       .top {
-        padding: 14px 20px 12px;
+        padding: 18px 16px 16px;
       }
 
-      .logo {
-        font-size: 27px;
+      .top-image {
+        max-width: 100%;
+      }
+
+      .tagline {
+        margin-top: 14px;
+        padding: 0 5px;
+        font-size: 13px;
       }
 
       .mobile-menu-button {
@@ -222,24 +196,12 @@
         border-top: 1px solid rgba(255,255,255,.10);
       }
 
-      .hero {
-        padding: 40px 20px 65px;
-      }
-
-      .tagline {
-        font-size: 18px;
-      }
-
-      .hero-image-container {
-        margin-top: 30px;
+      .categories {
+        padding: 50px 20px 70px;
       }
 
       .category-grid {
         grid-template-columns: 1fr;
-      }
-
-      .categories {
-        padding-bottom: 70px;
       }
     }
   </style>
@@ -250,9 +212,17 @@
 <header>
 
   <div class="top">
-    <p class="logo">
-      <a href="./">KANINOLOGI</a>
+
+    <img
+      src="images/forside/FB_IMG_1789365767690.jpg"
+      alt="Kaninologi"
+      class="top-image"
+    >
+
+    <p class="tagline">
+      Faglig og evidensbaseret viden om kaniners adfærd, sundhed, ernæring og velfærd.
     </p>
+
   </div>
 
   <div class="menu-bar">
@@ -277,62 +247,42 @@
 
 <main>
 
-  <section class="hero">
-
-    <div class="hero-content">
-
-      <p class="tagline">
-        Faglig og evidensbaseret viden om kaniners adfærd, sundhed, ernæring og velfærd.
-      </p>
-
-      <div class="hero-image-container">
-        <img
-          src="images/forside/FB_IMG_1789365767690.jpg"
-          alt="Kaninologi"
-          class="hero-image"
-        >
-      </div>
-
-    </div>
-
-  </section>
-
   <section class="categories">
 
     <div class="categories-title">
-      <h2>Viden om kaniner</h2>
+      <h1>Viden om kaniner</h1>
       <p>Find det emne, du vil vide mere om.</p>
     </div>
 
     <div class="category-grid">
 
       <a href="sundhed/" class="category-card">
-        <h3>Sundhed</h3>
+        <h2>Sundhed</h2>
         <p>Sygdom, smerter, forebyggelse og kaninens sundhed.</p>
       </a>
 
       <a href="ernaering/" class="category-card">
-        <h3>Ernæring</h3>
+        <h2>Ernæring</h2>
         <p>Kost, hø og græs, foder, snacks og godbidder.</p>
       </a>
 
       <a href="adfaerd/" class="category-card">
-        <h3>Adfærd</h3>
+        <h2>Adfærd</h2>
         <p>Forstå kaninens adfærd, signaler og naturlige behov.</p>
       </a>
 
       <a href="planter/" class="category-card">
-        <h3>Planter</h3>
+        <h2>Planter</h2>
         <p>Planteportrætter og viden om planter til kaniner.</p>
       </a>
 
       <a href="kaninhold/" class="category-card">
-        <h3>Kaninhold</h3>
+        <h2>Kaninhold</h2>
         <p>Bolig, indretning og gode rammer for hverdagen med kaniner.</p>
       </a>
 
       <a href="om/" class="category-card">
-        <h3>Om Kaninologi</h3>
+        <h2>Om Kaninologi</h2>
         <p>Hvem står bag Kaninologi, og hvorfor findes siden?</p>
       </a>
 
