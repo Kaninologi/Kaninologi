@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="da">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +10,6 @@
         content="Kaninologi formidler faglig og evidensbaseret viden om kaniners sundhed, ernæring, adfærd og velfærd.">
 
   <style>
-
     * {
       box-sizing: border-box;
     }
@@ -26,9 +24,6 @@
       color: #222222;
       font-family: Arial, Helvetica, sans-serif;
     }
-
-
-    /* LOGO */
 
     .top {
       background: #ffffff;
@@ -48,9 +43,6 @@
       text-decoration: none;
     }
 
-
-    /* HOVEDMENU */
-
     .menu-bar {
       background: #536557;
     }
@@ -58,7 +50,6 @@
     .menu {
       max-width: 1100px;
       margin: 0 auto;
-
       display: flex;
       justify-content: center;
       align-items: center;
@@ -67,60 +58,39 @@
     .menu a {
       min-height: 54px;
       padding: 0 18px;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       color: #ffffff;
       text-decoration: none;
-
       font-size: 15px;
       font-weight: 600;
-
-      transition: background 0.2s ease;
+      transition: background .2s ease;
     }
 
-    .menu a:hover {
-      background: rgba(255,255,255,0.12);
-    }
-
+    .menu a:hover,
     .menu a.active {
-      background: rgba(255,255,255,0.12);
+      background: rgba(255,255,255,.12);
     }
-
-
-    /* MOBILMENU */
 
     .mobile-menu-button {
       display: none;
-
       width: 100%;
       height: 52px;
-
       border: none;
       background: #536557;
-      color: white;
-
+      color: #ffffff;
       font-family: inherit;
       font-size: 16px;
       font-weight: 600;
-
       cursor: pointer;
     }
 
-
-    /* FORSIDE */
-
     .hero {
-      min-height: 620px;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
-      padding: 75px 24px 110px;
-
+      padding: 75px 24px 100px;
       text-align: center;
       background: #ffffff;
     }
@@ -132,38 +102,33 @@
 
     .hero h1 {
       margin: 0;
-
       font-size: clamp(60px, 12vw, 115px);
-      line-height: 0.95;
-
+      line-height: .95;
       letter-spacing: -4px;
       font-weight: 700;
     }
 
     .tagline {
       max-width: 720px;
-
       margin: 30px auto 0;
-
       font-size: 20px;
       line-height: 1.6;
-
       color: #555555;
     }
 
-
-    /* PLADS TIL SENERE ILLUSTRATION */
-
-    .illustration-space {
+    .hero-image-container {
       width: 100%;
-      max-width: 700px;
-      min-height: 250px;
-
+      max-width: 760px;
       margin: 45px auto 0;
     }
 
-
-    /* KATEGORIER */
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 4px;
+    }
 
     .categories {
       max-width: 1050px;
@@ -178,7 +143,6 @@
 
     .categories-title h2 {
       margin: 0 0 10px;
-
       font-size: 32px;
       line-height: 1.2;
     }
@@ -197,23 +161,15 @@
 
     .category-card {
       min-height: 150px;
-
       padding: 28px;
-
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-
       background: #f4f6f3;
-
       border: 1px solid #e5e9e3;
-
       text-decoration: none;
       color: #222222;
-
-      transition:
-        transform 0.2s ease,
-        background 0.2s ease;
+      transition: transform .2s ease, background .2s ease;
     }
 
     .category-card:hover {
@@ -223,37 +179,24 @@
 
     .category-card h3 {
       margin: 0 0 6px;
-
       font-size: 22px;
     }
 
     .category-card p {
       margin: 0;
-
       color: #666666;
-
       font-size: 14px;
       line-height: 1.5;
     }
 
-
-    /* FOOTER */
-
     footer {
       border-top: 1px solid #eeeeee;
-
       padding: 30px 20px;
-
       text-align: center;
-
       font-size: 13px;
       color: #777777;
-
       background: #ffffff;
     }
-
-
-    /* MOBIL */
 
     @media (max-width: 850px) {
 
@@ -282,17 +225,13 @@
       .menu a {
         width: 100%;
         min-height: 48px;
-
         justify-content: flex-start;
-
         padding: 0 22px;
-
-        border-top: 1px solid rgba(255,255,255,0.10);
+        border-top: 1px solid rgba(255,255,255,.10);
       }
 
       .hero {
-        min-height: 500px;
-        padding: 65px 24px 80px;
+        padding: 55px 20px 70px;
       }
 
       .hero h1 {
@@ -304,8 +243,7 @@
         font-size: 18px;
       }
 
-      .illustration-space {
-        min-height: 150px;
+      .hero-image-container {
         margin-top: 35px;
       }
 
@@ -316,80 +254,41 @@
       .categories {
         padding-bottom: 70px;
       }
-
     }
-
   </style>
-
 </head>
 
-
 <body>
-
 
 <header>
 
   <div class="top">
-
     <p class="logo">
-      <a href="index.html">KANINOLOGI</a>
+      <a href="./">KANINOLOGI</a>
     </p>
-
   </div>
-
 
   <div class="menu-bar">
 
-    <button
-      class="mobile-menu-button"
-      id="mobileMenu"
-      aria-label="Åbn menu">
-
+    <button class="mobile-menu-button" id="mobileMenu" aria-label="Åbn menu">
       Menu ☰
-
     </button>
 
-
     <nav class="menu" id="mainMenu">
-
-      <a href="index.html" class="active">
-        Forside
-      </a>
-
-      <a href="sundhed.html">
-        Sundhed
-      </a>
-
-      <a href="ernaering.html">
-        Ernæring
-      </a>
-
-      <a href="adfaerd.html">
-        Adfærd
-      </a>
-
-      <a href="planter.html">
-        Planter
-      </a>
-
-      <a href="praktisk.html">
-        Praktisk
-      </a>
-
-      <a href="om.html">
-        Om Kaninologi
-      </a>
-
+      <a href="./" class="active">Forside</a>
+      <a href="sundhed/">Sundhed</a>
+      <a href="ernaering/">Ernæring</a>
+      <a href="adfaerd/">Adfærd</a>
+      <a href="planter/">Planter</a>
+      <a href="kaninhold/">Kaninhold</a>
+      <a href="om/">Om Kaninologi</a>
     </nav>
 
   </div>
 
 </header>
 
-
-
 <main>
-
 
   <section class="hero">
 
@@ -398,133 +297,78 @@
       <h1>Kaninologi</h1>
 
       <p class="tagline">
-        Faglig og evidensbaseret viden om kaniners adfærd,
-        sundhed, ernæring og velfærd.
+        Faglig og evidensbaseret viden om kaniners adfærd, sundhed, ernæring og velfærd.
       </p>
 
-      <div class="illustration-space">
-        <!-- Her kan vi senere indsætte illustration af Louis og Ludwig -->
+      <div class="hero-image-container">
+        <img
+          src="images/forside/FB_IMG_1789365767690.jpg"
+          alt="Kaninologi"
+          class="hero-image"
+        >
       </div>
 
     </div>
 
   </section>
 
-
-
   <section class="categories">
 
     <div class="categories-title">
-
       <h2>Viden om kaniner</h2>
-
-      <p>
-        Find det emne, du vil vide mere om.
-      </p>
-
+      <p>Find det emne, du vil vide mere om.</p>
     </div>
-
 
     <div class="category-grid">
 
-
-      <a href="sundhed.html" class="category-card">
-
+      <a href="sundhed/" class="category-card">
         <h3>Sundhed</h3>
-
-        <p>
-          Sygdom, smerter, forebyggelse og kaninens sundhed.
-        </p>
-
+        <p>Sygdom, smerter, forebyggelse og kaninens sundhed.</p>
       </a>
 
-
-      <a href="ernaering.html" class="category-card">
-
+      <a href="ernaering/" class="category-card">
         <h3>Ernæring</h3>
-
-        <p>
-          Kost, hø og græs, foder, snacks og godbidder.
-        </p>
-
+        <p>Kost, hø og græs, foder, snacks og godbidder.</p>
       </a>
 
-
-      <a href="adfaerd.html" class="category-card">
-
+      <a href="adfaerd/" class="category-card">
         <h3>Adfærd</h3>
-
-        <p>
-          Forstå kaninens adfærd, signaler og naturlige behov.
-        </p>
-
+        <p>Forstå kaninens adfærd, signaler og naturlige behov.</p>
       </a>
 
-
-      <a href="planter.html" class="category-card">
-
+      <a href="planter/" class="category-card">
         <h3>Planter</h3>
-
-        <p>
-          Planteportrætter og viden om planter til kaniner.
-        </p>
-
+        <p>Planteportrætter og viden om planter til kaniner.</p>
       </a>
 
-
-      <a href="praktisk.html" class="category-card">
-
-        <h3>Praktisk</h3>
-
-        <p>
-          Hverdagen med kaniner, indretning og praktiske guides.
-        </p>
-
+      <a href="kaninhold/" class="category-card">
+        <h3>Kaninhold</h3>
+        <p>Bolig, indretning og gode rammer for hverdagen med kaniner.</p>
       </a>
 
-
-      <a href="om.html" class="category-card">
-
+      <a href="om/" class="category-card">
         <h3>Om Kaninologi</h3>
-
-        <p>
-          Om projektet og tankerne bag Kaninologi.
-        </p>
-
+        <p>Hvem står bag Kaninologi, og hvorfor findes siden?</p>
       </a>
-
 
     </div>
 
   </section>
 
-
 </main>
 
-
-
 <footer>
-
   © 2026 Kaninologi · Viden om kaniner
-
 </footer>
 
-
-
 <script>
-
   const mobileMenu = document.getElementById("mobileMenu");
   const mainMenu = document.getElementById("mainMenu");
 
   mobileMenu.addEventListener("click", function() {
-
     mainMenu.classList.toggle("mobile-open");
-
   });
-
 </script>
 
-
 </body>
-
 </html>
