@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adfærd | Kaninologi</title>
+  <meta name="description" content="Faglig og evidensbaseret viden om kaniners adfærd, kommunikation og naturlige behov.">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: #222;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .top { text-align: center; padding: 28px 20px 24px; }
+
+    .logo {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 3px;
+    }
+
+    .logo a { color: #222; text-decoration: none; }
+
+    .menu-bar { background: #536557; }
+
+    .menu {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .menu a {
+      min-height: 54px;
+      padding: 0 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .menu a:hover,
+    .menu a.active { background: rgba(255,255,255,.12); }
+
+    .mobile-menu-button {
+      display: none;
+      width: 100%;
+      height: 52px;
+      border: none;
+      background: #536557;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .page-header {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 80px 25px 55px;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      margin: 0 0 20px;
+      font-size: clamp(48px, 8vw, 76px);
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    .page-header p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #555;
+      font-size: 19px;
+      line-height: 1.6;
+    }
+
+    .empty {
+      max-width: 700px;
+      min-height: 180px;
+      margin: 0 auto;
+      padding: 20px 25px 100px;
+      text-align: center;
+      color: #777;
+      line-height: 1.6;
+    }
+
+    footer {
+      border-top: 1px solid #eee;
+      padding: 30px 20px;
+      text-align: center;
+      color: #777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 850px) {
+      .mobile-menu-button { display: block; }
+      .menu { display: none; flex-direction: column; }
+      .menu.mobile-open { display: flex; }
+
+      .menu a {
+        width: 100%;
+        min-height: 48px;
+        justify-content: flex-start;
+        padding: 0 22px;
+        border-top: 1px solid rgba(255,255,255,.10);
+      }
+
+      .page-header { padding-top: 55px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="top">
+    <p class="logo"><a href="../">KANINOLOGI</a></p>
+  </div>
+
+  <div class="menu-bar">
+    <button class="mobile-menu-button" id="mobileMenu" aria-label="Åbn menu">Menu ☰</button>
+
+    <nav class="menu" id="mainMenu">
+      <a href="../">Forside</a>
+      <a href="../sundhed/">Sundhed</a>
+      <a href="../ernaering/">Ernæring</a>
+      <a href="../adfaerd/" class="active">Adfærd</a>
+      <a href="../planter/">Planter</a>
+      <a href="../kaninhold/">Kaninhold</a>
+      <a href="../om/">Om Kaninologi</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-header">
+    <h1>Adfærd</h1>
+    <p>Bliv klogere på kaninens adfærd, kommunikation og naturlige behov.</p>
+  </section>
+
+  <div class="empty">
+    Der kommer løbende nye artikler om kaniners adfærd.
+  </div>
+</main>
+
+<footer>© 2026 Kaninologi · Viden om kaniner</footer>
+
+<script>
+  const mobileMenu = document.getElementById("mobileMenu");
+  const mainMenu = document.getElementById("mainMenu");
+
+  mobileMenu.addEventListener("click", function() {
+    mainMenu.classList.toggle("mobile-open");
+  });
+</script>
+
+</body>
+</html>
