@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kaninens kostpyramide | Kaninologi</title>
+
+  <meta name="description"
+        content="Kaninens kostpyramide giver et overblik over hø, græs, grønt, foderpiller, grene, frugt og vand i kaninens kost.">
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: #222222;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    .top {
+      background: #ffffff;
+      text-align: center;
+      padding: 28px 20px 24px;
+    }
+
+    .logo {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 3px;
+    }
+
+    .logo a {
+      color: #222222;
+      text-decoration: none;
+    }
+
+    .menu-bar {
+      background: #536557;
+      position: relative;
+      z-index: 100;
+    }
+
+    .menu {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .menu-item {
+      position: relative;
+    }
+
+    .menu-link,
+    .menu-button {
+      height: 54px;
+      padding: 0 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: none;
+      color: white;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .menu-link:hover,
+    .menu-button:hover,
+    .menu-button.active {
+      background: rgba(255,255,255,0.12);
+    }
+
+    .arrow {
+      margin-left: 8px;
+      font-size: 10px;
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 54px;
+      left: 0;
+      min-width: 220px;
+      background: white;
+      border: 1px solid #e3e3e3;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+      display: none;
+    }
+
+    .dropdown.open {
+      display: block;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 13px 16px;
+      color: #222222;
+      text-decoration: none;
+      font-size: 14px;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .dropdown a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown a:hover {
+      background: #f5f6f4;
+    }
+
+    .mobile-menu-button {
+      display: none;
+      width: 100%;
+      height: 52px;
+      border: none;
+      background: #536557;
+      color: white;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .article-header {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 75px 25px 35px;
+      text-align: center;
+    }
+
+    .category {
+      color: #536557;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    h1 {
+      margin: 12px 0 18px;
+      font-size: clamp(48px, 8vw, 78px);
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    .subtitle {
+      margin: 0 auto 25px;
+      max-width: 720px;
+      font-size: 22px;
+      line-height: 1.5;
+      color: #444444;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 18px;
+      color: #555555;
+    }
+
+    .pyramid {
+      max-width: 760px;
+      margin: 35px auto 65px;
+      padding: 0 25px;
+    }
+
+    .pyramid-part {
+      margin: 0 auto 8px;
+      padding: 18px 20px;
+      text-align: center;
+      border: 1px solid #d9dfd7;
+      background: #f6f8f5;
+      font-weight: 700;
+    }
+
+    .fruit {
+      width: 28%;
+    }
+
+    .branches {
+      width: 44%;
+    }
+
+    .pellets {
+      width: 60%;
+    }
+
+    .greens {
+      width: 80%;
+    }
+
+    .hay {
+      width: 100%;
+      padding: 28px 20px;
+      background: #e9efe7;
+      border-color: #cdd8ca;
+    }
+
+    article {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 25px 90px;
+      font-size: 17px;
+    }
+
+    article section {
+      margin-bottom: 58px;
+    }
+
+    article h2 {
+      margin: 0 0 18px;
+      font-size: 31px;
+      line-height: 1.25;
+    }
+
+    article p {
+      margin: 0 0 22px;
+    }
+
+    .highlight-box {
+      margin: 35px 0;
+      padding: 24px 28px;
+      background: #f1f4f0;
+      border-left: 5px solid #536557;
+    }
+
+    .sources {
+      margin-top: 70px;
+      padding: 30px;
+      background: #f7f8f6;
+      border: 1px solid #e0e4de;
+    }
+
+    .sources h2 {
+      margin-top: 0;
+      font-size: 25px;
+    }
+
+    .sources p {
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    .sources p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      border-top: 1px solid #eeeeee;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #777777;
+      background: #ffffff;
+    }
+
+    @media (max-width: 850px) {
+
+      .top {
+        padding: 22px 20px;
+      }
+
+      .logo {
+        font-size: 27px;
+      }
+
+      .mobile-menu-button {
+        display: block;
+      }
+
+      .menu {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .menu.mobile-open {
+        display: flex;
+      }
+
+      .menu-item {
+        width: 100%;
+      }
+
+      .menu-link,
+      .menu-button {
+        width: 100%;
+        height: 48px;
+        justify-content: space-between;
+        padding: 0 20px;
+        border-top: 1px solid rgba(255,255,255,0.10);
+      }
+
+      .dropdown {
+        position: static;
+        width: 100%;
+        border: none;
+        box-shadow: none;
+        background: #f5f6f4;
+      }
+
+      .dropdown a {
+        padding-left: 35px;
+      }
+
+      .article-header {
+        padding-top: 55px;
+      }
+
+      .subtitle {
+        font-size: 19px;
+      }
+
+      .intro {
+        font-size: 17px;
+      }
+
+      .pyramid {
+        margin-top: 25px;
+      }
+
+      .fruit {
+        width: 42%;
+      }
+
+      .branches {
+        width: 58%;
+      }
+
+      .pellets {
+        width: 72%;
+      }
+
+      .greens {
+        width: 88%;
+      }
+
+      .hay {
+        width: 100%;
+      }
+
+      article h2 {
+        font-size: 27px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="top">
+    <p class="logo">
+      <a href="index.html">KANINOLOGI</a>
+    </p>
+  </div>
+
+  <div class="menu-bar">
+
+    <button class="mobile-menu-button" id="mobileMenu">
+      Menu ☰
+    </button>
+
+    <nav class="menu" id="mainMenu">
+
+      <div class="menu-item">
+        <a class="menu-link" href="index.html">
+          Forside
+        </a>
+      </div>
+
+      <div class="menu-item">
+        <button class="menu-button">
+          Viden
+          <span class="arrow">▼</span>
+        </button>
+
+        <div class="dropdown">
+          <a href="kostpyramide.html">Kaninens kostpyramide</a>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <button class="menu-button">
+          Sundhed
+          <span class="arrow">▼</span>
+        </button>
+
+        <div class="dropdown">
+          <a href="#">Smerter hos kaniner</a>
+          <a href="#">Hø</a>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <button class="menu-button">
+          Adfærd
+          <span class="arrow">▼</span>
+        </button>
+
+        <div class="dropdown">
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <button class="menu-button">
+          Planter
+          <span class="arrow">▼</span>
+        </button>
+
+        <div class="dropdown">
+          <a href="#">Planteportrætter</a>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <button class="menu-button">
+          Praktisk
+          <span class="arrow">▼</span>
+        </button>
+
+        <div class="dropdown">
+          <a href="#">Den gode base</a>
+          <a href="#">Vinterflytning</a>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <a class="menu-link" href="#">
+          Om Kaninologi
+        </a>
+      </div>
+
+    </nav>
+  </div>
+
+</header>
+
+<main>
+
+  <section class="article-header">
+
+    <div class="category">
+      Viden
+    </div>
+
+    <h1>Kaninens kostpyramide</h1>
+
+    <p class="subtitle">
+      Hvad skal der egentlig i madskålen, høhækken og på grønttallerkenen?
+    </p>
+
+    <p class="intro">
+      Her får du et overblik over de forskellige dele af kaninens kost,
+      hvorfor de er vigtige, og hvor meget din kanin cirka har brug for.
+    </p>
+
+    <p class="intro">
+      Procenterne i pyramiden er vejledende. Den enkelte kanins behov kan
+      blandt andet variere med alder, størrelse, aktivitetsniveau, huld og helbred.
+    </p>
+
+  </section>
+
+  <div class="pyramid">
+
+    <div class="pyramid-part fruit">
+      Frugt og andre sukkerholdige fødevarer
+    </div>
+
+    <div class="pyramid-part branches">
+      Grene
+    </div>
+
+    <div class="pyramid-part pellets">
+      Foderpiller ca. 4 %
+    </div>
+
+    <div class="pyramid-part greens">
+      Grønt ca. 15 %
+    </div>
+
+    <div class="pyramid-part hay">
+      Hø og græs ca. 80 %
+    </div>
+
+  </div>
+
+  <article>
+
+    <section>
+
+      <h2>Hø og græs - ca. 80 %</h2>
+
+      <p>
+        Hø og græs bør udgøre langt størstedelen af kosten og være frit
+        tilgængeligt døgnet rundt.
+      </p>
+
+      <p>
+        Det høje fiberindhold er vigtigt for fordøjelsen, og de mange timers
+        tyggearbejde hjælper med at slide kaninens tænder naturligt.
+        Kaniners tænder vokser nemlig hele livet.
+      </p>
+
+      <p>
+        Hø og græs handler heller ikke kun om ernæring. Kaniner bruger
+        naturligt en stor del af deres tid på at spise og søge efter føde.
+        Fri adgang til hø giver dem derfor mulighed for at bruge mange timer
+        på netop det.
+      </p>
+
+      <p>
+        Vælg gerne et groft, støvfrit og velduftende hø med god struktur og
+        forskellige græsarter. Frisk græs er også en rigtig god del af kosten,
+        men hvis kaninen ikke er vant til det, bør det introduceres gradvist.
+      </p>
+
+    </section>
+
+    <section>
+
+      <h2>Grønt - ca. 15 %</h2>
+
+      <p>
+        Grønt kan bestå af bladgrønt, friske krydderurter og kaninsikre
+        vilde planter.
+      </p>
+
+      <p>
+        Det kan for eksempel være forskellige typer kål, salat og krydderurter
+        eller vilde planter som mælkebøtte, vejbred, skvalderkål og mange
+        andre urter fra naturen.
+      </p>
+
+      <p>
+        Kål kan sagtens indgå i en varieret kaninkost. Som med andet nyt grønt
+        bør kaninen vænnes gradvist til det, så fordøjelsen får tid til at
+        tilpasse sig. Start med en lille mængde og øg langsomt.
+      </p>
+
+      <p>
+        Variation er en god idé frem for at servere det samme hver dag.
+        Plukker du selv i naturen, skal du være sikker på artsbestemmelsen og
+        vælge steder uden sprøjtemidler og anden forurening.
+      </p>
+
+    </section>
+
+    <section>
+
+      <h2>Foderpiller - ca. 4 %</h2>
+
+      <p>
+        Foderpiller er et supplement til den øvrige kost og skal derfor kun
+        fylde en lille del.
+      </p>
+
+      <p>
+        Til en sund, voksen kanin kan man som udgangspunkt give omkring
+        5–15 g foderpiller pr. kg kropsvægt om dagen. En kanin på 2 kg vil
+        altså typisk få omkring 10–30 g dagligt.
+      </p>
+
+      <p>
+        Mængden er vejledende og bør altid tilpasses den enkelte kanin.
+        Alder, vægt, huld, aktivitetsniveau, helbred, leveforhold og resten
+        af kosten spiller alle ind. Nogle voksne kaniner trives derfor med
+        meget lidt foderpiller, mens andre har brug for mere.
+      </p>
+
+      <p>
+        Kaniner i vækst har et større behov for energi og næringsstoffer og
+        kan derfor have brug for mere foder. Her bør mængden tilpasses
+        kaninens alder, vækst og huld samt det konkrete juniorfoder.
+      </p>
+
+      <p>
+        Vælg et ensartet og fiberrigt pelleteret eller ekstruderet fuldfoder.
+      </p>
+
+    </section>
+
+    <section>
+
+      <h2>Grene - gerne dagligt</h2>
+
+      <p>
+        Friske, kaninsikre grene er både noget at spise og noget at
+        beskæftige sig med. Kaninen kan gnave i barken, spise blade og
+        friske skud og bruge tid på at undersøge og arbejde med grenene.
+      </p>
+
+      <p>
+        Æble, pære, hassel og elm er nogle af de arter, du kan tilbyde.
+      </p>
+
+      <p>
+        Når kaninen gnaver i grene og bark, bidrager det også til at slide
+        tænderne. Grene kan dog ikke erstatte hø og græs, som kaninen bruger
+        mange timer på at tygge, og som derfor spiller en vigtig rolle for
+        det naturlige tandslid.
+      </p>
+
+    </section>
+
+    <section>
+
+      <h2>Og den sidste lille del?</h2>
+
+      <p>
+        Frugt og andre sukkerholdige fødevarer er ikke nødvendige i kaninens
+        kost. De kan sagtens undværes, men kan også gives i små mængder som
+        en godbid en gang imellem.
+      </p>
+
+    </section>
+
+    <div class="highlight-box">
+
+      <strong>Frisk vand</strong>
+
+      <p>
+        Frisk vand skal altid være frit tilgængeligt. Det står ikke i pyramiden
+        som en procentdel, men er selvfølgelig helt grundlæggende for kaninens
+        sundhed.
+      </p>
+
+    </div>
+
+    <section class="sources">
+
+      <h2>Hvis du vil nørde mere</h2>
+
+      <p>
+        Rabbit Welfare Association & Fund (RWAF).
+        <em>How to feed rabbits.</em>
+      </p>
+
+      <p>
+        Harcourt-Brown, F. (2017).
+        <em>Reflections on rabbit diets.</em>
+        Journal of Small Animal Practice, 58(3), 123–124.
+        DOI: 10.1111/jsap.12660
+      </p>
+
+      <p>
+        Harcourt-Brown, F.
+        <em>Rabbit Basic Science.</em>
+        I: Textbook of Rabbit Medicine.
+      </p>
+
+      <p>
+        Meredith, A.L. & Prebble, J.L. (2017).
+        <em>Impact of diet on faecal output and caecotroph consumption in rabbits.</em>
+        Journal of Small Animal Practice, 58(3), 139–145.
+        DOI: 10.1111/jsap.12620
+      </p>
+
+    </section>
+
+  </article>
+
+</main>
+
+<footer>
+  © 2026 Kaninologi · Viden om kaniner
+</footer>
+
+<script>
+
+  const mobileMenu = document.getElementById("mobileMenu");
+  const mainMenu = document.getElementById("mainMenu");
+  const menuButtons = document.querySelectorAll(".menu-button");
+
+  mobileMenu.addEventListener("click", function() {
+    mainMenu.classList.toggle("mobile-open");
+  });
+
+  menuButtons.forEach(function(button) {
+
+    button.addEventListener("click", function(event) {
+
+      event.stopPropagation();
+
+      const dropdown = button.nextElementSibling;
+
+      menuButtons.forEach(function(otherButton) {
+
+        if (otherButton !== button) {
+
+          otherButton.classList.remove("active");
+
+          const otherDropdown = otherButton.nextElementSibling;
+
+          if (otherDropdown) {
+            otherDropdown.classList.remove("open");
+          }
+
+        }
+
+      });
+
+      button.classList.toggle("active");
+
+      if (dropdown) {
+        dropdown.classList.toggle("open");
+      }
+
+    });
+
+  });
+
+  document.addEventListener("click", function() {
+
+    menuButtons.forEach(function(button) {
+
+      button.classList.remove("active");
+
+      const dropdown = button.nextElementSibling;
+
+      if (dropdown) {
+        dropdown.classList.remove("open");
+      }
+
+    });
+
+  });
+
+</script>
+
+</body>
+</html>
