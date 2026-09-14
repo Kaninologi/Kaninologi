@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Om Kaninologi | Kaninologi</title>
+
+  <meta name="description"
+        content="Læs om personen bag Kaninologi, hvorfor siden blev skabt og den faglige tilgang til formidling af viden om kaniner.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: #222222;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .top {
+      text-align: center;
+      padding: 28px 20px 24px;
+    }
+
+    .logo {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 3px;
+    }
+
+    .logo a {
+      color: #222222;
+      text-decoration: none;
+    }
+
+    .menu-bar {
+      background: #536557;
+    }
+
+    .menu {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .menu a {
+      min-height: 54px;
+      padding: 0 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .menu a:hover,
+    .menu a.active {
+      background: rgba(255,255,255,0.12);
+    }
+
+    .mobile-menu-button {
+      display: none;
+      width: 100%;
+      height: 52px;
+      border: none;
+      background: #536557;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .page-header {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 80px 25px 45px;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      margin: 0 0 20px;
+      font-size: clamp(48px, 8vw, 76px);
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    .page-header p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #555555;
+      font-size: 19px;
+      line-height: 1.6;
+    }
+
+    .about {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 20px 25px 100px;
+    }
+
+    .about h2 {
+      margin: 45px 0 18px;
+      font-size: 28px;
+      line-height: 1.25;
+    }
+
+    .about h2:first-child {
+      margin-top: 0;
+    }
+
+    .about p {
+      margin: 0 0 22px;
+      font-size: 17px;
+      line-height: 1.8;
+      color: #333333;
+    }
+
+    .veterinary-note {
+      margin: 40px 0;
+      padding: 25px 28px;
+      background: #f4f6f3;
+      border-left: 4px solid #536557;
+    }
+
+    .veterinary-note p {
+      margin: 0;
+    }
+
+    footer {
+      border-top: 1px solid #eeeeee;
+      padding: 30px 20px;
+      text-align: center;
+      color: #777777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 850px) {
+      .mobile-menu-button {
+        display: block;
+      }
+
+      .menu {
+        display: none;
+        flex-direction: column;
+      }
+
+      .menu.mobile-open {
+        display: flex;
+      }
+
+      .menu a {
+        width: 100%;
+        min-height: 48px;
+        justify-content: flex-start;
+        padding: 0 22px;
+        border-top: 1px solid rgba(255,255,255,0.10);
+      }
+
+      .page-header {
+        padding-top: 55px;
+      }
+
+      .about {
+        padding-bottom: 70px;
+      }
+
+      .about p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="top">
+    <p class="logo">
+      <a href="../">KANINOLOGI</a>
+    </p>
+  </div>
+
+  <div class="menu-bar">
+
+    <button class="mobile-menu-button" id="mobileMenu" aria-label="Åbn menu">
+      Menu ☰
+    </button>
+
+    <nav class="menu" id="mainMenu">
+      <a href="../">Forside</a>
+      <a href="../sundhed/">Sundhed</a>
+      <a href="../ernaering/">Ernæring</a>
+      <a href="../adfaerd/">Adfærd</a>
+      <a
